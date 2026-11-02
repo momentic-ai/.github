@@ -27,16 +27,28 @@ report. It can also fix the bugs Mo finds and recheck them.
 
 You can also start a session from [the app](https://app.momentic.ai/mo) or by
 mentioning `@momentic-ai` on a pull request
-([GitHub setup](https://momentic.ai/docs/mo/integrations/github)). Mo is in
-beta and needs a Momentic account: [sign up](https://momentic.ai/mo). See the
+([GitHub setup](https://momentic.ai/docs/mo/integrations/github)). Mo needs a
+Momentic account: [sign up](https://momentic.ai/mo). See the
 [quickstart](https://momentic.ai/docs/mo/quickstart).
 
 Momentic also runs plain-English end-to-end tests. They live as YAML files in
 your repo and run locally or in CI.
 
+## QA Bench
+
+[QA Bench](https://momentic.ai/qa-bench) runs Mo, Codex, Claude Code and Devin
+against 20 product areas of Gitea, Metabase, Twenty and Saleor, then grades
+their bug reports against 1,396 human-reviewed bug labels. With 60 minutes per
+area, Mo found about 269 labeled bugs at 84% precision. The next best agent
+found about 86.
+
+[Write-up](https://momentic.ai/blog/qa-bench) |
+[Code](https://github.com/momentic-ai/qa-bench) |
+[Dataset](https://huggingface.co/datasets/momentic/qa-bench)
+
 ## Repositories
 
-- [qa-bench](https://github.com/momentic-ai/qa-bench): a benchmark of AI QA agents (Mo, Codex, Claude Code, Devin) graded against 1,396 labeled bugs in Gitea, Metabase, Twenty and Saleor. [Results](https://momentic.ai/qa-bench), [dataset](https://huggingface.co/datasets/momentic/qa-bench).
+- [qa-bench](https://github.com/momentic-ai/qa-bench): the QA Bench harness, fixtures and results.
 - [qa](https://github.com/momentic-ai/qa): the CLI for Mo.
 - [skills](https://github.com/momentic-ai/skills): agent skills and MCP servers for coding agents.
 - [cli](https://github.com/momentic-ai/cli): the Momentic CLI. Write, run and repair web tests from your terminal.
